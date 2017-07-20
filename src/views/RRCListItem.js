@@ -5,7 +5,7 @@ function RRCListItem(props) {
         return <div></div>
     } 
     return (
-        <a href={props.url}>
+        <a href={props.url} key={props.name}>
             <figure>
                 <img src={props.previewSrc} alt={props.title}/> 
             </figure>
