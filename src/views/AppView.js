@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
+import RRCList from './RRCList.js'
 import '../App.css';
 
 function AppView(props) {
@@ -16,14 +17,8 @@ function AppView(props) {
                 </p>
             </div>
         );
-    } else {
-        console.log('THINGS: ', props);
-        return (
-            <div className="App">
-                PLACE THE THINGS HERE!
-            </div>
-        );
-    }
+    } 
+    return RRCList(props.things);
 }
 
 export default AppView;
