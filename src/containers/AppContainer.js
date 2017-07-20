@@ -10,7 +10,7 @@ function getStores() {
 
 function getState() {
   return {
-    items: RRCStore.getState(),
+    things: RRCStore.getState(),
   };
 }
 

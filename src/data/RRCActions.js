@@ -2,10 +2,9 @@ import RRCActionTypes from './RRCActionTypes';
 import RRCDispatcher from './RRCDispatcher';
 
 const Actions = {
-  addTodo(text) {
+  getNew() {
     RRCDispatcher.dispatch({
-      type: RRCActionTypes.GET_NEW,
-      text,
+      type: RRCActionTypes.GET_NEW
     });
   },
 };
