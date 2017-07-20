@@ -1,6 +1,7 @@
 import AppView from '../views/AppView';
 import {Container} from 'flux/utils';
 import RRCStore from '../data/RRCStore';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 function getStores() {
   return [
@@ -14,4 +15,5 @@ function getState() {
   };
 }
 
+injectTapEventPlugin();
 export default Container.createFunctional(AppView, getStores, getState);
