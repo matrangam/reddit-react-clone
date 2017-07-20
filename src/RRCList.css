@@ -1,26 +1,46 @@
-body { margin: 0; background: #333; }
-.RRCList { 
-  padding: .5vw;
-  font-size: 0;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap; 
-  flex-flow: row wrap; 
-  display: -webkit-box;
+body {
+  width: 80%;
+  margin: 30px auto;
+  font-family: sans-serif;
+}
+.RRCList {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* or space-around */
 }
-.RRCListItem { 
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto; 
-  width: 200px; 
-  margin: .5vw; 
+
+.RRCList a {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  text-decoration: none;
+  color: black;
 }
-.RRCListItem img { 
-  width: 100%; 
-  height: auto; 
+
+@media screen and (min-width: 50em) {
+  a {
+    width: calc(25% - 6px);
+  }
 }
-@media screen and (max-width: 400px) {
-  .RRCList { margin: 0; }
+
+.RRCList a:hover img {
+  transform: scale(1.15);
+}
+
+.RRCList figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.RRCList figcaption {
+  margin-top: 15px;
+}
+
+.RRCList img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
 }

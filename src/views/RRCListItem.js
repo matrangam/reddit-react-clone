@@ -4,11 +4,13 @@ function RRCListItem(props) {
     if (props.size === 0) {
         return <div></div>
     } 
-    return ( 
-        <div className='RRCListItem' key={props.name}> 
-            <p>{props.title}</p>
-            <img src={props.previewSrc} alt={props.title}/> 
-        </div>
+    return (
+        <a href={props.url}>
+            <figure>
+                <img src={props.previewSrc} alt={props.title}/> 
+            </figure>
+            <figcaption>{props.title}</figcaption>
+        </a>
     );
 }
 
