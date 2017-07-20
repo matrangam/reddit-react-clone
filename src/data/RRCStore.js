@@ -25,16 +25,18 @@ class RRCStore extends ReduceStore {
     }
 
     parseResponse() {
-        let redditThings = sampleData.data.children.map((child) => {
+        return sampleData.data.children.filter((child) => {
+            if (!child.data.is_self) {
+                return child
+            }
+        }).map((child) => {
             return new RRCThing({
                 name: child.data.name,
                 url: child.data.url,
                 title: child.data.title,
-                createdUtc: child.data.created_utc,
-                isSelf: child.data.is_self
+                createdUtc: child.data.created_utc
             })
         })
-        return redditThings;
     }
 }
 
