@@ -4,7 +4,8 @@ const RRCThing = Immutable.Record({
     name: '',
     url: '',
     title: '',
-    createdUtc: ''
+    createdUtc: '',
+    previewSrc: ''
 });
 
 export default RRCThing;

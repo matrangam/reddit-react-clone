@@ -34,9 +34,14 @@ class RRCStore extends ReduceStore {
                 name: child.data.name,
                 url: child.data.url,
                 title: child.data.title,
-                createdUtc: child.data.created_utc
+                createdUtc: child.data.created_utc,
+                previewSrc: this.getPreviewSrc(child.data.preview)
             })
         })
+    }
+
+    getPreviewSrc(preview) {
+        return preview.images[0].resolutions[2].url
     }
 }
 
