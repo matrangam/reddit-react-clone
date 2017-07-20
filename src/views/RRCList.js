@@ -1,11 +1,12 @@
 import React from 'react';
 import RRCListItem from './RRCListItem.js';
+import '../RRCList.css'
 
 function RRCList(props) {
     if (props.size === 0) {
-        return <ul> <li>NO THINGS TO SHOW</li> </ul>
+        return <div> <p>NO THINGS TO SHOW</p> </div>
     } 
-    return <ul>{props.map(thing => RRCListItem(thing))}</ul>;
+    return <div className='RRCList'>{props.map(thing => RRCListItem(thing))}</div>;
 }
 
 export default RRCList
