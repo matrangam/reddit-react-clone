@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../logo.svg';
 import RRCList from './RRCList.js'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../App.css';
 
 function AppView(props) {
@@ -18,7 +19,11 @@ function AppView(props) {
             </div>
         );
     } 
-    return RRCList(props.things);
+    return (
+        <MuiThemeProvider>
+            {RRCList(props.things)}
+        </MuiThemeProvider>
+    )
 }
 
 export default AppView;
