@@ -10,13 +10,8 @@ const styles = {
         justifyContent: 'space-around',
     },
     gridList: {
-        width: '100%',
+        width: '90%',
         overflowY: 'auto',
-    },
-    gridItem: {
-        titleStyle: {
-            whiteSpace: 'wrap'
-        }
     },
 };
 
@@ -26,6 +21,9 @@ const buildGridTiles = (props) => {
             key={tile.name}
             title={tile.title}
             style={styles.gridItem}
+            actionPosition="left"
+            titlePosition="top"
+            titleBackground="linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
             actionIcon={<IconButton><StarBorder color="white" /></IconButton>}>
             <img src={tile.previewSrc} alt={tile.title} />
         </GridTile>
