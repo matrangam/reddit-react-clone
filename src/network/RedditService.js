@@ -33,7 +33,7 @@ const getTopPics = () => {
         };
 
         xhr.send();
-    })
+    });
 }
 
 export { getTopPics }

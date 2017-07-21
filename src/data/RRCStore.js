@@ -3,8 +3,6 @@ import {ReduceStore} from 'flux/utils';
 import RRCActionTypes from './RRCActionTypes';
 import RRCDispatcher from './RRCDispatcher';
 import RRCThing from './RRCThing.js'
-import sampleData from '../sampleData.json';
-import {getTopPics} from '../network/RedditService.js'
 
 class RRCStore extends ReduceStore {
     constructor() {
@@ -18,17 +16,15 @@ class RRCStore extends ReduceStore {
     reduce(state, action) {
         switch (action.type) {
             case RRCActionTypes.GET_NEW:
-                state = this.parseResponse()
+                state = this.parseResponse(action.result)
                 return state;
             default:
                 return state;
         }
     }
 
-    parseResponse() {
-        getTopPics()
-
-        return sampleData.data.children.filter((child) => {
+    parseResponse(result) {
+        return result.data.children.filter((child) => {
             if (child.data.is_self) { return null }
             return child
         }).map((child) => {
