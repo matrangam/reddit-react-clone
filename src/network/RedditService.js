@@ -23,9 +23,7 @@ const getTopPics = () => {
         }
 
         xhr.onload = () => {
-            let response = JSON.parse(xhr.response);
-            console.log(response)
-            resolve(response);
+            resolve(JSON.parse(xhr.response));
         };
 
         xhr.onerror = () => {

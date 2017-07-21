@@ -3,7 +3,6 @@ import spinner from '../spinner.svg'
 
 const styles = {
     loader: {
-        margin: '0 0 2em',
         height: '100px',
         width: '100%',
         textAlign: 'center',
@@ -16,7 +15,7 @@ const styles = {
 
 export default (props) => (
     <div style={styles.loader}>
-        <img src={spinner}/>
+        <img src={spinner} alt="Loading Spinner" />
     </div>
 );
 
