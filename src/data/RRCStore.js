@@ -26,9 +26,8 @@ class RRCStore extends ReduceStore {
 
     parseResponse() {
         return sampleData.data.children.filter((child) => {
-            if (!child.data.is_self) {
-                return child
-            }
+            if (child.data.is_self) { return null }
+            return child
         }).map((child) => {
             return new RRCThing({
                 name: child.data.name,

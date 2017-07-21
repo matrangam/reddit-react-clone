@@ -5,7 +5,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../App.css';
 
 function AppView(props) {
-
     if (props.things.size === 0) {
         return (
             <div className="App">
