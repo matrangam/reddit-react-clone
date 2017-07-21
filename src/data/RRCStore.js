@@ -4,6 +4,7 @@ import RRCActionTypes from './RRCActionTypes';
 import RRCDispatcher from './RRCDispatcher';
 import RRCThing from './RRCThing.js'
 import sampleData from '../sampleData.json';
+import {getTopPics} from '../network/RedditService.js'
 
 class RRCStore extends ReduceStore {
     constructor() {
@@ -25,6 +26,8 @@ class RRCStore extends ReduceStore {
     }
 
     parseResponse() {
+        getTopPics()
+
         return sampleData.data.children.filter((child) => {
             if (child.data.is_self) { return null }
             return child
