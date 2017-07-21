@@ -31,11 +31,11 @@ const buildGridTiles = (props) => {
 }
 
 export default (props) => (
-  <div style={styles.root}>
-    <GridList
-        cellHeight={180}
-        style={styles.gridList}>
-        {buildGridTiles(props)}
-    </GridList>
-  </div>
+    <div style={styles.root}>
+        <GridList
+            cellHeight={180}
+            style={styles.gridList}>
+            {buildGridTiles(props)}
+        </GridList>
+    </div>
 );

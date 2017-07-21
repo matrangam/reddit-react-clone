@@ -2,27 +2,17 @@ import React from 'react';
 import logo from '../logo.svg';
 import RRCList from './RRCList.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import '../App.css';
+import TitleBar from './RRCTitleBar.js'
+import Spinner from './Spinner.js'
 
-function AppView(props) {
-    if (props.things.size === 0) {
-        return (
-            <div className="App">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h2>Welcome to React</h2>
-                </div>
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
-            </div>
-        );
-    } 
+export default (props) => {
     return (
-        <MuiThemeProvider>
-            {RRCList(props.things)}
+        <MuiThemeProvider>              
+            <div>
+                <TitleBar></TitleBar>
+                {props.things.length === 0 ? <Spinner></Spinner> : RRCList(props.things)}  
+                
+            </div>
         </MuiThemeProvider>
     )
 }
-
-export default AppView;
