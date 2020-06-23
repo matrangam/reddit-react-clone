@@ -3,8 +3,6 @@
 
 ## Tools
 
-The site is hosted on S3 at [this location](http://reddit-react-clone.s3-website-us-east-1.amazonaws.com)
-
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 UI library provided by [Material UI](http://www.material-ui.com/)
